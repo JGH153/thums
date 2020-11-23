@@ -39,7 +39,7 @@ i {
   /* transform: scale(1); */
   /* transform: scale(1.5); */
   /* transform: scale(0.2); */
-  /* transform: scale(0.3); */
+  transform: scale(0.3);
   background: white;
   width: 1280px;
   height: 720px;
@@ -48,8 +48,6 @@ i {
   justify-content: center;
   align-items: center;
 
-  /* font-family: "Source Sans Pro", Helvetica, sans-serif; */
-  /* font-weight: 600; */
 
   font-size: 60px;
   font-family: arial, sans-serif;
@@ -94,18 +92,26 @@ i {
 }
 
 .ceo-img {
+  --left-off: -360px;
+  --left-bottom: -180px;
   position: absolute;
-  /* right: 0; */
-  left: -60px;
-  bottom: -39px;
-  /* top: 0; */
-  width: 500px;
+  left: var(--left-off);
+  bottom: var(--left-bottom);
+  width: 800px;
   transform: scaleX(-1);
+  z-index: 4;
+}
+
+.ceo-white {
+  --white-scale: 0.04;
+  filter: brightness(0) invert(1);
+  transform: scaleX(-1) scale(calc(var(--white-scale) + 1))
+    translateX(calc(var(--white-scale) * 1%))
+    translateY(calc(var(--white-scale) * 1%));
   z-index: 3;
 }
 
 .logo-container {
-  /* background: red; */
   position: relative;
   width: 100%;
   display: flex;
@@ -168,7 +174,9 @@ i {
   max-width: 900px;
   margin: 5px 5px;
   border: none;
-  color: rgba(0, 0, 0, 0.87);
+	color: rgba(0, 0, 0, 0.87);
+	/* font-style: italic; */
+	text-transform: capitalize;
 }
 
 .right-icons-container {
