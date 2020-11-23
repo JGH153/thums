@@ -37,9 +37,9 @@ i {
 .thumbnail {
   /*debug*/
   /* transform: scale(1); */
-  /* transform: scale(1.5); */
+  transform: scale(1.5);
   /* transform: scale(0.2); */
-  transform: scale(0.3);
+  /* transform: scale(0.3); */
   background: white;
   width: 1280px;
   height: 720px;
@@ -106,8 +106,8 @@ i {
   --white-scale: 0.04;
   filter: brightness(0) invert(1);
   transform: scaleX(-1) scale(calc(var(--white-scale) + 1))
-    translateX(calc(var(--white-scale) * 1%))
-    translateY(calc(var(--white-scale) * 1%));
+    translateX(0.4%)
+    translateY(0.4%);
   z-index: 3;
 }
 
